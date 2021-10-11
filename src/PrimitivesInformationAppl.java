@@ -25,6 +25,10 @@ public class PrimitivesInformationAppl {
 		//for example, printCharInformation - method printing out the info about type "char"
 		switch(type) {
 		case "long":
+			// V.R. It is good idea to implement "long" logic in tghe separate
+			// private static method. Like the following:
+			// private static void printLongInformation()
+			// Each case calls the suitable method
 			long minValue = 1; 
 			long maxValue = 1;
 			int nBits = 1;
@@ -32,6 +36,9 @@ public class PrimitivesInformationAppl {
 				minValue =  (minValue * 2);//compiler casts minValue to int, multiplies on 2 
 				nBits = nBits + 1;
 			}
+			// V.R. It is possible to declare the variable maxValue and to
+			// initialize it in the line. Like the following:
+			// long maxValue=(minValue-1);
 			maxValue =  (minValue - 1);
 			System.out.printf("minimal value is %d, maximal value is %d, number of bytes is %d\n", minValue, maxValue, nBits / 8);
 			break;
@@ -79,6 +86,8 @@ public class PrimitivesInformationAppl {
 			maxValueByte =  (byte)(minValueByte - 1);
 			System.out.printf("minimal value is %d, maximal value is %d, number of bytes is %d\n",(int) minValueByte, (int) maxValueByte, nBitsByte / 8);
 			break;
+			// V.R. It is better to add which type is wrong.
+			// For example. fffafag is the wrong type
 			default:System.out.printf("Wrong type!!!");
 		}
 	}
