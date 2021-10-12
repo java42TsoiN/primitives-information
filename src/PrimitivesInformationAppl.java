@@ -25,6 +25,7 @@ public class PrimitivesInformationAppl {
 		//for example, printCharInformation - method printing out the info about type "char"
 		switch(type) {
 		case "long":
+				//See carefully line 23 saying that there should be separate methods for each type rather than very long switch operator
 			long minValue = 1; 
 			long maxValue = 1;
 			int nBits = 1;
